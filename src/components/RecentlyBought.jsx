@@ -1,88 +1,97 @@
-import festive from "../images/festive.jpg";
+import festive from "../images/festive.jpg"; 
 import chevron from "../images/chevron.jpg";
 import manila from "../images/manila.jpg";
 import diamante from "../images/diamante.jpg";
 import banneth from "../images/banneth.jpg";
-
-import React from 'react'
+import React from "react";
+import { useCart } from "./ShoppingCart";
 
 const RecentlyBought = () => {
+  const { addToCart } = useCart();
+
+  // sample data
+  const recentPurchases = [
+    {
+      id: 1,
+      name: "Festive Looks Rust Red Ribbed Velvet Long Sleeve Bodysuit",
+      image: festive,
+      price: "$38",
+      discounted: "",
+      color: "Rust Red",
+      size: "Medium",
+    },
+    {
+      id: 2,
+      name: "Chevron Flap Crossbody Bag",
+      image: chevron,
+      price: "$5.77",
+      discounted: "$7.34",
+      color: "Black",
+      size: "",
+    },
+    {
+      id: 3,
+      name: "Manilla Tan Multi Plaid Oversized Fringe Scarf",
+      image: manila,
+      price: "$29",
+      discounted: "$39",
+      color: "Multi-color",
+      size: "Medium",
+    },
+    {
+      id: 4,
+      name: "Diamante Puff Sleeve Dress - Black",
+      image: diamante,
+      price: "$45.99",
+      discounted: "",
+      color: "Black",
+      size: "Small",
+    },
+    {
+      id: 5,
+      name: "Banneth Open Front Formal Dress in Black",
+      image: banneth,
+      price: "$69",
+      discounted: "$99.95",
+      color: "Black",
+      size: "Large",
+    },
+  ];
+
   return (
-    <>
-        <div className="pageContent mw-1440 recently">
-            <h1>Recently Bought</h1>
-            <div className="allCards">
-                <div className="cardlist">
-                    <div className="cardItem">
-                        <img className="cardItemImage" src={festive} alt="" />
-                        <span>Festive Looks Rust Red Ribbed Velvet Long Sleeve Bodysuit</span>
-                    </div>
-                    <div className="cardPricing">
-                        <span className="price">$38</span>
-                    </div>
-                    <div className="buyAgain">
-                        <button className="btn btn-success">Buy Again</button>
-                    </div>
+    <div className="pageContent mw-1440 recently">
+      <h1>Recently Bought</h1>
+      <div className="allCards">
+        <div style={{ display: "flex", gap: "20px" }}>
+          {recentPurchases.map((item) => (
+            <div className="cardlist" key={item.id}>
+              <div className="cardItem">
+                <img
+                  className="cardItemImage"
+                  src={item.image}
+                  alt={item.name}
+                  style={{ width: "150px" }}
+                />
+                <span>{item.name}</span>
+            </div>
+                <div className="cardPricing">
+                    <span className="price discounted">{item.price}</span>
+                    <span className="slashedPrice">{item.discounted}</span>
                 </div>
-
-                <div className="cardlist">
-                    <div className="cardItem">
-                        <img className="cardItemImage" src={chevron} alt="" />
-                        <span>Chevron Flap Crossbody Bag</span>
-                    </div>
-                    <div className="cardPricing">
-                        <span className="price discounted">$5.77</span>
-                        <span className="slashedPrice">$7.34</span>
-                    </div>
-                    <div className="buyAgain">
-                        <button className="btn btn-success">Buy Again</button>
-                    </div>
-                </div>
-
-                <div className="cardlist">
-                    <div className="cardItem">
-                        <img className="cardItemImage" src={manila} alt="" />
-                        <span>Manilla Tan Multi Plaid Oversized Fringe Scarf</span>
-                    </div>
-                    <div className="cardPricing">
-                        <span className="price discounted">$29</span>
-                        <span className="slashedPrice">$39</span>
-                    </div>
-                    <div className="buyAgain">
-                        <button className="btn btn-success">Buy Again</button>
-                    </div>
-                </div>
-
-                <div className="cardlist">
-                    <div className="cardItem">
-                        <img className="cardItemImage" src={diamante} alt="" />
-                        <span>Diamante Puff Sleeve Dress - Black</span>
-                    </div>
-                    <div className="cardPricing">
-                        <span className="price discounted">$45.99</span>
-                    </div>
-                    <div className="buyAgain">
-                        <button className="btn btn-success">Buy Again</button>
-                    </div>
-                </div>
-
-                <div className="cardlist">
-                    <div className="cardItem">
-                        <img className="cardItemImage" src={banneth} alt="" />
-                        <span>Banneth Open Front Formal Dress in Black</span>
-                    </div>
-                    <div className="cardPricing">
-                        <span className="price discounted">$69</span>
-                        <span className="slashedPrice">$99.95</span>
-                    </div>
-                    <div className="buyAgain">
-                        <button className="btn btn-success">Buy Again</button>
-                    </div>
+                <div className="buyAgain">
+                  <button
+                    className="btn btn-success"
+                    onClick={() => addToCart(item)}
+                  >
+                    Buy Again
+                  </button>
                 </div>
             </div>
+          ))}
         </div>
-    </>
-  )
-}
+      </div>
+    </div>
+  );
+};
 
-export default RecentlyBought
+export default RecentlyBought;

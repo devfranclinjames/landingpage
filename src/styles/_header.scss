@@ -4,12 +4,20 @@
     justify-content:space-evenly;
     align-items: center;
 }
-
+section.headersect{
+    position: fixed;
+    z-index: 99999;
+    width: 100%;
+}
 header{
     height: 70px;
     background:white;
     width: 100%;
+
     
+    .cart{
+        max-width: 35px;
+    }
     .activeNav{
         font-weight: 600;
     }
@@ -21,11 +29,13 @@ header{
         margin:0 10px;
     }
     .onrightLogo{
+        align-items: center;
         display: flex;
         .onrightLogoItems{
             margin:0 15px;
         }
     }
+    
     .currency{
         position: relative;
         .usLogoCurrency{

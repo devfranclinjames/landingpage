@@ -1,7 +1,7 @@
 @import './header';
 @import './variables';
 @import './homeContent';
-@import './floatingCart';
+@import './baseCart';
 
 
 @mixin absoluteMid{
@@ -13,7 +13,13 @@
 .mw-1440{
     max-width: $mw-1440;
 }
-
+.headersect{
+    z-index: 999999;
+}
+.sliderSect{
+    padding-top:120px;
+    position: relative;
+}
 // button behavior
 .btnize:hover{
     background:rgb(226, 226, 226)!important;
