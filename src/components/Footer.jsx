@@ -18,7 +18,7 @@ const Footer = () => {
     const navigate2 = useNavigate();
 
     const handleLogoClick2 = () => {
-      navigate2('/');
+      navigate2('/landingpage/');
     };
   return (
     <>

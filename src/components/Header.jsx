@@ -25,7 +25,7 @@ const Header = () => {
     const navigate = useNavigate();
 
     const handleLogoClick = () => {
-      navigate('/');
+      navigate('/landingpage/');
     };
   const [isAccordionOpen, setAccordionOpen] = useState(false);
 

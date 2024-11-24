@@ -16,7 +16,7 @@ function App() {
         <Routes>
           {/* Define the home route */}
           <Route
-            path="/"
+            path="/landingpage/"
             element={
               <>
                 <section className="sliderSect"><Slider /></section>
