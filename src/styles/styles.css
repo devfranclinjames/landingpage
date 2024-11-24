@@ -211,16 +211,59 @@ header .currency .usLogoCurrency {
 .recently .allCards {
   align-items: flex-start;
 }
+.recently .cardItem {
+  height: 360px;
+}
+.recently .cardItemImage {
+  margin-bottom: 10px;
+}
+.recently .cardPricing span {
+  font-weight: 600 !important;
+}
+.recently .price.discounted {
+  font-weight: 800 !important;
+  color: #C1272D;
+  width: 58px;
+  display: inline-block;
+}
+.recently .slashedPrice {
+  text-decoration: line-through;
+}
+.recently .buyAgain {
+  margin-top: 10px;
+}
+
+.floatingCart .cart {
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  max-width: 400px;
+}
+.floatingCart .cart-items {
+  list-style-type: none;
+  padding: 0;
+}
+.floatingCart .cart-items li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
 
 .mw-1440 {
   max-width: 1440px;
 }
 
 .btnize:hover {
-  background: rgb(226, 226, 226);
+  background: rgb(226, 226, 226) !important;
+  cursor: pointer;
 }
 
-.herobtn {
+.blackbtn:hover {
+  cursor: pointer;
+  background: rgb(26, 26, 26) !important;
+}
+
+.herobtn button {
   left: 50%;
   transform: translateX(-50%);
   background: white;

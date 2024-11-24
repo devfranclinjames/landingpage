@@ -21,15 +21,15 @@ function Slider() {
         <div className="carousel-inner">
           <div className="carousel-item active">
             <img className="d-block w-100" src={img0} alt="First slide" />
-            <ShopNowBtn/>
+            <div className="herobtn"><ShopNowBtn/></div>
           </div>
           <div className="carousel-item">
             <img className="d-block w-100" src={img0} alt="Second slide" />
-            <ShopNowBtn/>
+            <div className="herobtn"><ShopNowBtn/></div>
           </div>
           <div className="carousel-item">
             <img className="d-block w-100" src={img0} alt="Third slide" />
-            <ShopNowBtn/>
+            <div className="herobtn"><ShopNowBtn/></div>
           </div>
         </div>
         <a

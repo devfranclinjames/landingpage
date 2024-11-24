@@ -1,12 +1,15 @@
-import winterFashion from "../images/winterFashion.jpg"
-import party from "../images/party.jpg"
-import sweater from "../images/sweater.jpg"
-import whitedress from "../images/whitedress.jpg"
-import outerwear from "../images/outerwear.jpg"
-import holidays from "../images/holidays.jpg" 
-import nightout from "../images/nightout.jpg" 
-import boots from "../images/boots.jpg" 
-import goldbg from "../images/goldbg.jpg" 
+import winterFashion from "../images/winterFashion.jpg";
+import party from "../images/party.jpg";
+import sweater from "../images/sweater.jpg";
+import whitedress from "../images/whitedress.jpg";
+import outerwear from "../images/outerwear.jpg";
+import holidays from "../images/holidays.jpg";
+import nightout from "../images/nightout.jpg" ;
+import boots from "../images/boots.jpg";
+import goldbg from "../images/goldbg.jpg";
+
+import ShopNowBtn from "./ShopNowBtn";
+
 import React from 'react'
 
 const HomeContent = () => {
@@ -49,7 +52,7 @@ const HomeContent = () => {
                 <span>FREE SHIPPING ON ALL ORDERS FOR VIP 2 AND UP!</span>
             </div>
             <div className="blockset c">
-                <button>SHOP NOW</button>
+                <ShopNowBtn />
             </div>
         </section>
         <section className="pageContent container">
@@ -126,7 +129,7 @@ const HomeContent = () => {
             <div className="newsContent">
                 <h1>NEW ARRIVALS</h1>
                 <span>Get ready for the holidays with us!</span>
-                <button>SHOP NOW</button>
+                <ShopNowBtn/>
             </div>
         </div>
     </>

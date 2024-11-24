@@ -1,0 +1,17 @@
+.floatingCart{
+    .cart {
+        margin-top: 20px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        max-width: 400px;
+    }
+    .cart-items {
+        list-style-type: none;
+        padding: 0;
+    }
+    .cart-items li {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
+}

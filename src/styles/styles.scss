@@ -1,6 +1,7 @@
 @import './header';
 @import './variables';
 @import './homeContent';
+@import './floatingCart';
 
 
 @mixin absoluteMid{
@@ -15,9 +16,14 @@
 
 // button behavior
 .btnize:hover{
-    background:rgb(226, 226, 226);
+    background:rgb(226, 226, 226)!important;
+    cursor:pointer;
 }
-.herobtn{
+.blackbtn:hover{
+    cursor: pointer;
+    background:rgb(26, 26, 26)!important;
+}
+.herobtn button{
     @include absoluteMid();
     background:white;
     padding:8px 25px;

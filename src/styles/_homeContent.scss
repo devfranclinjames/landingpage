@@ -169,5 +169,25 @@
     .allCards{
         align-items: flex-start;
     }
+    .cardItem{
+        height:360px;
+    }
+    .cardItemImage{
+        margin-bottom: 10px;
+    }
+    .cardPricing span{
+        font-weight: 600!important;
+    }
+    .price.discounted{
+        font-weight: 800!important;
+        color: #C1272D;
+        width: 58px;
+        display: inline-block;
+    }
+    .slashedPrice{
+        text-decoration: line-through;
+    }
+    .buyAgain{
+        margin-top:10px;
+    }
 }
-
