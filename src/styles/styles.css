@@ -1,4 +1,5 @@
 header {
+  max-width: 1440px;
   height: 70px;
   background: white;
   width: 100%;
@@ -159,11 +160,6 @@ header .currency .usLogoCurrency {
 .newsCard .cardimagemerge {
   position: absolute;
 }
-.newsCard .bg {
-  filter: saturate(2);
-  width: 100%;
-  z-index: 1;
-}
 .newsCard .a, .newsCard .b, .newsCard .newsContent {
   left: 50%;
   transform: translateX(-50%);
@@ -197,16 +193,45 @@ header .currency .usLogoCurrency {
   margin-top: 25px;
   font-weight: 600;
 }
-.newsCard:after {
-  width: 100%;
+
+.recently {
+  padding: 0 50px;
+}
+.recently span {
+  font-weight: 400 !important;
+  font-size: 14px !important;
+}
+.recently .cardlist {
+  max-width: 225px;
+  text-align: left !important;
+}
+.recently .cardItem span {
+  line-height: 0 !important;
+}
+.recently .allCards {
+  align-items: flex-start;
+}
+
+.mw-1440 {
+  max-width: 1440px;
+}
+
+.btnize:hover {
+  background: rgb(226, 226, 226);
+}
+
+.herobtn {
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  padding: 8px 25px;
   position: absolute;
-  height: 400px;
-  z-index: 1;
-  content: " ";
-  background-image: linear-gradient(to right, rgba(100, 100, 100, 0.368627451), rgba(95, 44, 27, 0.2745098039));
-  top: 0%;
-  right: 0;
-  filter: contrast(0.9);
+  bottom: 100px;
+  left: 75%;
+  max-width: 278px;
+  font-size: 36px;
+  font-weight: 600;
+  filter: drop-shadow(0px 4px 4px gray);
 }
 
 body {

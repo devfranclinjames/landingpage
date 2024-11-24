@@ -115,11 +115,6 @@
     .cardimagemerge{
         position: absolute;
     }
-    .bg{
-        filter: saturate(2.0);
-        width: 100%;
-        z-index: 1;
-    }
     .a, .b, .newsContent{
         @include absoluteMid();
         z-index: 2;
@@ -153,18 +148,25 @@
             font-weight: 600;
         }
     }
-    &:after{
-        width: 100%;
-        position: absolute;
-        height: 400px;
-        z-index: 1;
-        content:" ";
-        background-image: linear-gradient(to right, #6464645e, #5f2c1b46);
-        top: 0%;
-        right: 0;
-        filter:contrast(0.9);
-    }
 
 }
 
+.recently{
+    padding: 0 50px;
+
+    span{
+        font-weight: $baseFontWeight!important;
+        font-size: $baseFontSize!important;
+    }
+    .cardlist{
+        max-width: 225px;
+        text-align: left!important;
+    }
+    .cardItem span{
+        line-height: 0!important;
+    }
+    .allCards{
+        align-items: flex-start;
+    }
+}
 

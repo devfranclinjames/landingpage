@@ -1,6 +1,5 @@
-import img0 from "../images/Hero.png";
-import img1 from "../images/Hero.png";
-import img2 from "../images/Hero.png";
+import img0 from "../images/Hero.jpg";
+import ShopNowBtn from "./ShopNowBtn";
 
 function Slider() {
   return (
@@ -22,12 +21,15 @@ function Slider() {
         <div className="carousel-inner">
           <div className="carousel-item active">
             <img className="d-block w-100" src={img0} alt="First slide" />
+            <ShopNowBtn/>
           </div>
           <div className="carousel-item">
-            <img className="d-block w-100" src={img1} alt="Second slide" />
+            <img className="d-block w-100" src={img0} alt="Second slide" />
+            <ShopNowBtn/>
           </div>
           <div className="carousel-item">
-            <img className="d-block w-100" src={img2} alt="Third slide" />
+            <img className="d-block w-100" src={img0} alt="Third slide" />
+            <ShopNowBtn/>
           </div>
         </div>
         <a

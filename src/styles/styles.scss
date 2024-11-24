@@ -3,8 +3,34 @@
 @import './homeContent';
 
 
+@mixin absoluteMid{
+    left: 50%;
+    transform: translateX(-50%);
+}
 
+// max widths
+.mw-1440{
+    max-width: $mw-1440;
+}
 
+// button behavior
+.btnize:hover{
+    background:rgb(226, 226, 226);
+}
+.herobtn{
+    @include absoluteMid();
+    background:white;
+    padding:8px 25px;
+    position: absolute;
+    bottom: 100px;
+    left: 75%;
+    max-width: 278px;
+    font-size: 36px;
+    font-weight: 600;
+    filter: drop-shadow(0px 4px 4px gray);
+}
+
+// base Body
 body{
     font-family: $baseFont;
     color:$baseFontColor;
@@ -14,6 +40,8 @@ body{
 dl, ol, ul{
     margin-top:revert!important;
 }
+
+// custom adjustments
 .carousel-control-prev, .carousel-control-next, .carousel-indicators{
     opacity: 0!important;
 }
@@ -21,3 +49,4 @@ button{
     background:unset;
     border:none;
 }
+
