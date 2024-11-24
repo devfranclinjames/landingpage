@@ -1,0 +1,12 @@
+@import './header';
+@import './variables';
+
+
+
+body{
+    font-family: $baseFont;
+    color:$baseFontColor;
+    font-size: $baseFontSize;
+    font-weight: $baseFontWeight;
+}
+
