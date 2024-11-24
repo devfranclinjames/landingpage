@@ -1,3 +1,7 @@
+This is a mockup of a 24hour code challenge from ehrlich
+
+Website can be accessed here https://devfranclinjames.github.io/landingpage/
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
