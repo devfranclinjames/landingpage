@@ -1,5 +1,6 @@
 @import './header';
 @import './variables';
+@import './homeContent';
 
 
 
@@ -12,6 +13,10 @@ body{
 dl, ol, ul{
     margin-top:revert!important;
 }
-.carousel-control-prev, .carousel-control-next{
+.carousel-control-prev, .carousel-control-next, .carousel-indicators{
     opacity: 0!important;
+}
+button{
+    background:unset;
+    border:none;
 }

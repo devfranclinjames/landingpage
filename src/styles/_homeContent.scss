@@ -1,0 +1,86 @@
+.siteWide{
+    @include flexCenter();
+    max-height: 150px;
+    height: 150px;
+    width: 85%;
+    margin: 0 auto;
+    .siteWideItem{
+        font-weight: 600;
+        font-size:32px;
+        span{
+            font-size: 18px;
+            font-weight: 800;
+        }
+        .blackbtn{
+            font-size: 18px;
+            font-weight: 600;
+            background-color: black;
+            color: white;
+            border: none;
+            padding:9px 20px;
+            max-height: 42px;
+            max-width: 363px;
+        }
+            
+    }
+    .siteWideItemDetail{
+        font-size: $baseFontSize;
+        font-weight: $baseFontWeight;
+    }
+    
+}
+
+
+.blackFriday{
+    @include flexCenter();
+    background:url('../images/blackfriday-bg.png');
+    height: 75px;
+    color: white;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    .blockset.a{
+        font-weight: 800;
+        font-size:32px;
+    }
+    .blockset.b{
+        text-align:left;
+        max-width:354px;
+        font-size:18px;
+        font-weight: 600;
+    }
+    .blockset.c{
+        button{
+            background:white;
+            height: 42px;
+            width: 149px;
+            font-size: 18px;
+            font-weight: 600;
+        }
+    }
+    
+}
+
+.pageContent{
+    text-align: center;
+    margin-top:80px;
+    h1{
+        font-weight: 800;
+        font-size:36px;
+        text-align: center;
+    }
+    .allCards{
+        @include flexCenter();
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        margin-top:35px;
+    }
+    .cardItemImage{
+        display: block;
+    }
+    .cardItem span{
+        font-size: 24px;
+        font-weight:600;
+        line-height: 3.5rem;
+    }
+}
