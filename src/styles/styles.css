@@ -244,6 +244,27 @@ header .currency .usLogoCurrency {
   margin-top: 10px;
 }
 
+.blackbtn button {
+  color: white;
+  font-weight: 400;
+  padding: 0px;
+  text-transform: uppercase;
+}
+
+.vat {
+  padding-top: 50px;
+}
+
+.blackcheckout {
+  position: relative;
+  top: 18px;
+}
+
+.btn2 {
+  position: relative;
+  top: 5px;
+}
+
 .panel {
   position: absolute;
   top: 60px; /* Adjust based on your layout */
@@ -328,8 +349,108 @@ header .currency .usLogoCurrency {
   padding: 0 25px;
 }
 
+.blackbtn {
+  font-size: 18px;
+  font-weight: 600;
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 9px 20px;
+  max-height: 42px;
+  max-width: 363px;
+}
+
+section.insta {
+  background-color: #F2F2F2;
+  text-align: center;
+  padding-top: 50px;
+}
+section.insta .jumboTitle {
+  font-weight: 800;
+  font-size: 32px;
+  padding-bottom: 20px;
+}
+section.insta .ftrCards {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+section.insta .ftrCards img {
+  padding: 15px;
+}
+section.insta .btnwrappers {
+  padding-top: 25px;
+  padding-bottom: 50px;
+}
+
+section.newsletter {
+  height: 75px;
+}
+section.newsletter .newsletterWrapper {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background: black;
+  color: white;
+  height: 100%;
+}
+section.newsletter h1 {
+  font-size: 32px;
+  font-weight: 800;
+}
+section.newsletter input {
+  width: 400px;
+  padding: 11px;
+}
+section.newsletter img {
+  left: -48px;
+  position: relative;
+  border: 1px solid;
+  padding: 14px;
+}
+
+section.footerEnd {
+  height: 360px;
+  padding-top: 55px;
+}
+section.footerEnd .ftrSection {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+section.footerEnd .ftrwrapper {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  align-items: flex-start;
+}
+section.footerEnd .ftrCards img, section.footerEnd .socmedia img {
+  margin: 5px;
+}
+section.footerEnd .ftrsect {
+  margin: 15px;
+}
+section.footerEnd .lghide img {
+  visibility: hidden;
+}
+section.footerEnd .belowrrapper {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .mw-1440 {
   max-width: 1440px;
+}
+
+.mw-640 {
+  max-width: 640px;
 }
 
 .headersect {
@@ -363,6 +484,11 @@ header .currency .usLogoCurrency {
   font-size: 36px;
   font-weight: 600;
   filter: drop-shadow(0px 4px 4px gray);
+}
+
+div:nth-child(4) > div.cardPricing > span.slashedPrice,
+div:nth-child(1) > div.cardPricing > span.slashedPrice {
+  visibility: hidden;
 }
 
 body {

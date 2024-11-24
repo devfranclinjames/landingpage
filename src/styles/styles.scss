@@ -2,6 +2,7 @@
 @import './variables';
 @import './homeContent';
 @import './baseCart';
+@import './footerSection';
 
 
 @mixin absoluteMid{
@@ -12,6 +13,9 @@
 // max widths
 .mw-1440{
     max-width: $mw-1440;
+}
+.mw-640{
+    max-width: 640px;
 }
 .headersect{
     z-index: 999999;
@@ -41,6 +45,10 @@
     font-weight: 600;
     filter: drop-shadow(0px 4px 4px gray);
 }
+div:nth-child(4) > div.cardPricing > span.slashedPrice,
+div:nth-child(1) > div.cardPricing > span.slashedPrice{
+    visibility: hidden;
+}
 
 // base Body
 body{
@@ -69,3 +77,5 @@ button{
         text-transform: uppercase;
     }
 }
+
+

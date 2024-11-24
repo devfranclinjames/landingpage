@@ -6,6 +6,7 @@ import HomeContent from "./components/HomeContent";
 import RecentlyBought from "./components/RecentlyBought";
 import ShoppingCart from "./components/ShoppingCart";
 import Checkout from "./components/Checkout";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
                 <section className="sliderSect"><Slider /></section>
                 <HomeContent />
                 <RecentlyBought />
+                <Footer/>
               </>
             }
           />

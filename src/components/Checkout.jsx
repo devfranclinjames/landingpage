@@ -79,8 +79,12 @@ const Checkout = () => {
                   <b>${subtotal} </b>{/* Display the same total as subtotal */}
                 </div>
               </div>
-              <center><span>VAT included*</span></center>
+              <center className="vat"><span>VAT included*</span></center>
             </div>
+            <center className="blackcheckout">
+              <div className="blackbtn btn1"><button>Checkout as a Guest</button></div>
+              <div className="blackbtn btn2"><button>Sign In for faster Checkout</button></div>
+            </center>
           </div>
           </div>
         </>

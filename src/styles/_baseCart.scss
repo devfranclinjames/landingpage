@@ -3,6 +3,24 @@
   justify-content:space-evenly;
   align-items: center;
 }
+.blackbtn button {
+  color:white;
+  font-weight: 400;
+  padding: 0px;
+  text-transform: uppercase;
+  
+}
+.vat{
+  padding-top: 50px;
+}
+.blackcheckout{
+  position: relative;
+  top: 18px;
+}
+.btn2{
+  position: relative;
+  top:5px;
+}
 .panel {
   position: absolute;
   top: 60px; /* Adjust based on your layout */

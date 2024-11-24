@@ -1,0 +1,91 @@
+
+@mixin flexCenter{
+    display:flex;
+    justify-content:space-evenly;
+    align-items: center;
+}
+.blackbtn{
+    font-size: 18px;
+    font-weight: 600;
+    background-color: black;
+    color: white;
+    border: none;
+    padding:9px 20px;
+    max-height: 42px;
+    max-width: 363px;
+}
+section.insta{
+    background-color: #F2F2F2;
+    text-align:center;
+    padding-top:50px;
+    .jumboTitle{
+        font-weight: 800;
+        font-size:32px;
+        padding-bottom:20px;
+    }
+    .ftrCards{
+        @include flexCenter();
+        
+        img{
+            padding:15px;
+        }
+    }
+    .btnwrappers{
+        padding-top:25px;
+        padding-bottom:50px;
+    }
+}
+section.newsletter{
+    height: 75px;
+    .newsletterWrapper{
+        @include flexCenter();
+        background:black;
+        color:white;
+        height: 100%;
+    }
+    h1{
+        font-size:32px;
+        font-weight: 800;
+    }
+    input{
+        width: 400px;
+        padding: 11px;
+    }
+    img{
+        left: -48px;
+        position: relative;
+        border: 1px solid;
+        padding: 14px;
+
+    }
+}
+section.footerEnd{
+    height: 360px;
+    padding-top:55px;
+    .ftrSection{
+        @include flexCenter();
+        justify-content: space-around;
+        align-items: flex-start;
+    }
+    .ftrwrapper{
+        @include flexCenter();
+        align-items: flex-start;
+    }
+    .ftrCards img, .socmedia img{
+        margin:5px;
+    }
+    .ftrsect{
+        margin:15px;
+    }
+    .lghide img{
+        visibility: hidden;
+    }
+    .belowrrapper{
+        @include flexCenter();
+        max-width: 1200px;
+        margin: 0 auto;
+        justify-content: space-between;
+        align-items: center;
+        
+    }
+}
