@@ -15,8 +15,18 @@ import star from '../images/bx_bx-star.svg';
 import delivery from '../images/mdi_truck-delivery-outline.svg';
 import purchase from '../images/bx_bx-purchase-tag.svg';
 import cart from '../images/cart.svg';
+import { useNavigate } from 'react-router-dom';
+
+
+
+
 
 const Header = () => {
+    const navigate = useNavigate();
+
+    const handleLogoClick = () => {
+      navigate('/');
+    };
   const [isAccordionOpen, setAccordionOpen] = useState(false);
 
   const toggleAccordion = () => setAccordionOpen((prev) => !prev);
@@ -30,7 +40,7 @@ const Header = () => {
           <li>MEN</li>
           <li>ACCESSORIES</li>
         </ul>
-        <img className="logo" src={mainLogo} alt="" />
+        <img className="logo" src={mainLogo} onClick={handleLogoClick} alt=""/>
         <div className="onrightLogo">
           <img className="onrightLogoItems" src={user} alt="" />
           <img className="onrightLogoItems" src={bag} alt="" />

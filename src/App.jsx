@@ -1,22 +1,35 @@
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Slider from "./components/Slider";
 import HomeContent from "./components/HomeContent";
 import RecentlyBought from "./components/RecentlyBought";
 import ShoppingCart from "./components/ShoppingCart";
-
+import Checkout from "./components/Checkout";
 
 function App() {
-  
   return (
-    <>
-        <ShoppingCart>
-          <section className='headersect'><Header></Header></section>
-          <section className="sliderSect"><Slider></Slider></section>
-          <HomeContent></HomeContent>
-            <RecentlyBought/>
-        </ShoppingCart>
-    </>
-  )
+    <Router>
+      <ShoppingCart>
+        <section className="headerSect"><Header /></section>
+        <Routes>
+          {/* Define the home route */}
+          <Route
+            path="/"
+            element={
+              <>
+                <section className="sliderSect"><Slider /></section>
+                <HomeContent />
+                <RecentlyBought />
+              </>
+            }
+          />
+          {/* Define the checkout route */}
+          <Route path="/checkout" element={<Checkout />} />
+        </Routes>
+      </ShoppingCart>
+    </Router>
+  );
 }
 
-export default App
+export default App;

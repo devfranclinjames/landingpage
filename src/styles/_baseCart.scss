@@ -1,3 +1,8 @@
+@mixin flexCenter{
+  display:flex;
+  justify-content:space-evenly;
+  align-items: center;
+}
 .panel {
   position: absolute;
   top: 60px; /* Adjust based on your layout */
@@ -10,6 +15,8 @@
   width: auto;
   min-width: 670px;
   z-index: 1000;
+  max-height: 700px;
+  overflow-y: scroll;
 
   h1{
     font-size:24px;
@@ -20,6 +27,11 @@
   ul, li{
     list-style-type: none;
   }
+  img{
+    float: left;
+    margin:5px;
+  }
+  
 }
 
 .panel.hide {
@@ -35,4 +47,37 @@
 .accordion img {
   width: 24px;
   height: 24px;
+}
+
+.shoppingbag{
+  clear: both;
+  @include flexCenter();
+  align-items:flex-start;
+  img{
+    margin-right: 15px;
+    float: left;
+  }
+  ul, li{
+    list-style-type: none;
+    font-weight: 400;
+    clear: both;
+    padding-top: 5px;
+  }
+  .summary-inner{
+    @include flexCenter();
+    
+    justify-content: space-around;
+    min-width: 400px;
+  }
+  .summary{
+    border:1px solid black;
+    padding: 15px;
+  }
+  .checkoutItem{
+    @include flexCenter();
+    align-items: flex-start;
+  }
+  .flexone{
+    padding: 0 25px;
+  }
 }

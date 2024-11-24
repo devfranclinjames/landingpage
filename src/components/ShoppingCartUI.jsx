@@ -1,15 +1,21 @@
 import React from "react";
 import { useCart } from "./ShoppingCart";
+import { useNavigate } from "react-router-dom"; 
 
 const ShoppingCartUI = () => {
   const { cart, editCartItem, deleteFromCart } = useCart();
+  const navigate = useNavigate();
 
+  const goToCheckout = () => {
+    navigate("/checkout");
+  };
   return (
     <div >
       <h1>Shopping Cart</h1>
       {cart.length === 0 ? (
         <p>The cart is empty!</p>
       ) : (
+        <>
         <ul>
           {cart.map((item) => (
             <li key={item.id} style={{ marginBottom: "15px" }}>
@@ -17,12 +23,12 @@ const ShoppingCartUI = () => {
                 src={item.image}
                 alt={item.name}
                 style={{ width: "50px", marginRight: "10px" }}
-              /><br/>
+              />
               <strong>{item.name}</strong><br/>
               Size: {item.size}<br/> 
               Color: {item.color}<br/> 
-              Price: {item.price} x{" "}
-              Qty:<input
+              Price: {item.price} <br/>
+              Qty: <input
                 type="number"
                 min="1"
                 value={item.quantity}
@@ -35,6 +41,8 @@ const ShoppingCartUI = () => {
             </li>
           ))}
         </ul>
+        <center><button className="chckout btn btn-dark text-center" onClick={goToCheckout}>Proceed to Checkout</button></center>
+        </>
       )}
     </div>
   );

@@ -13,7 +13,18 @@ const ShoppingCart = ({ children }) => {
     // Load cart from cookies on component mount
     const savedCart = Cookies.get("shoppingCart");
     if (savedCart) {
-      setCart(JSON.parse(savedCart));
+      try {
+        const parsedCart = JSON.parse(savedCart).map((item) => ({
+          ...item,
+          price: parseFloat(item.price), // Ensure price is a number
+          quantity: parseInt(item.quantity, 10), // Ensure quantity is a number
+          discounted: item.discounted ? parseFloat(item.discounted) : null, // Ensure discounted is a number or null
+        }));
+        setCart(parsedCart);
+      } catch (error) {
+        console.error("Failed to parse cart from cookies:", error);
+        setCart([]); // Reset cart on error
+      }
     }
   }, []);
 

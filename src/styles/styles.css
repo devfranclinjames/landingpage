@@ -1,4 +1,4 @@
-section.headersect {
+section.headerSect {
   position: fixed;
   z-index: 99999;
   width: 100%;
@@ -256,6 +256,8 @@ header .currency .usLogoCurrency {
   width: auto;
   min-width: 670px;
   z-index: 1000;
+  max-height: 700px;
+  overflow-y: scroll;
 }
 .panel h1 {
   font-size: 24px;
@@ -267,6 +269,10 @@ header .currency .usLogoCurrency {
 }
 .panel ul, .panel li {
   list-style-type: none;
+}
+.panel img {
+  float: left;
+  margin: 5px;
 }
 
 .panel.hide {
@@ -282,6 +288,44 @@ header .currency .usLogoCurrency {
 .accordion img {
   width: 24px;
   height: 24px;
+}
+
+.shoppingbag {
+  clear: both;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  align-items: flex-start;
+}
+.shoppingbag img {
+  margin-right: 15px;
+  float: left;
+}
+.shoppingbag ul, .shoppingbag li {
+  list-style-type: none;
+  font-weight: 400;
+  clear: both;
+  padding-top: 5px;
+}
+.shoppingbag .summary-inner {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  justify-content: space-around;
+  min-width: 400px;
+}
+.shoppingbag .summary {
+  border: 1px solid black;
+  padding: 15px;
+}
+.shoppingbag .checkoutItem {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  align-items: flex-start;
+}
+.shoppingbag .flexone {
+  padding: 0 25px;
 }
 
 .mw-1440 {
@@ -339,4 +383,13 @@ dl, ol, ul {
 button {
   background: unset;
   border: none;
+}
+
+.checkout {
+  padding: 174px 0px;
+}
+.checkout h1 {
+  font-size: 28px;
+  font-weight: 600;
+  text-transform: uppercase;
 }/*# sourceMappingURL=styles.css.map */
