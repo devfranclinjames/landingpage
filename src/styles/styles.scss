@@ -9,4 +9,9 @@ body{
     font-size: $baseFontSize;
     font-weight: $baseFontWeight;
 }
-
+dl, ol, ul{
+    margin-top:revert!important;
+}
+.carousel-control-prev, .carousel-control-next{
+    opacity: 0!important;
+}

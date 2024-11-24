@@ -7,6 +7,11 @@ import search from '../images/bx_bx-search.svg'
 import rect from '../images/rectangle2.png'
 import flag from '../images/USFlag.svg'
 import arrwdwn from '../images/ant-design_down-outlined.png'
+import pin from '../images/bx_bx-map-pin.svg'
+import crown from '../images/bx_bx-crown.svg'
+import star from '../images/bx_bx-star.svg'
+import delivery from '../images/mdi_truck-delivery-outline.svg'
+import purchase from '../images/bx_bx-purchase-tag.svg'
 
 import React from 'react'
 
@@ -36,6 +41,28 @@ const Header = () => {
                 </div>
             </div>
         </header>
+        <div className="underHeader">
+            <div className="uheaderitem">
+                <img src={crown} alt="" />
+                <span>Exclusive Deals for VIP 2 and up!</span>
+            </div>
+            <div className="uheaderitem">
+                <img src={star} alt="" />
+                <span>Weekly New Arrivals</span>
+            </div>
+            <div className="uheaderitem">
+                <img src={delivery} alt="" />
+                <span>Free Shipping On Orders Over $100</span>
+            </div>
+            <div className="uheaderitem">
+                <img src={pin} alt="" />
+                <span>Track Your Order</span>
+            </div>
+            <div className="uheaderitem">
+                <img src={purchase} alt="" />
+                <span>10% Off On Your First Order!</span>
+            </div>
+        </div>
     </>
   )
 }

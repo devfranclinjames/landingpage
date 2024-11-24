@@ -5,7 +5,6 @@
 }
 
 
-
 header{
     height: 70px;
     background:white;
@@ -42,6 +41,23 @@ header{
         }
         margin-right: 15px;
     }
+
+    
+
     @include flexCenter();
 }
 
+// gray area under header
+.underHeader{
+    background-color: #F2F2F2;
+    display: flex;
+    justify-content: space-evenly;
+    height: 50px;
+}
+.uheaderitem{
+    display: flex;
+    align-items: center;
+    img{
+        margin-right: 15px;
+    }
+}

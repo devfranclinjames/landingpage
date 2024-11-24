@@ -34,9 +34,32 @@ header .currency .usLogoCurrency {
   align-items: center;
 }
 
+.underHeader {
+  background-color: #F2F2F2;
+  display: flex;
+  justify-content: space-evenly;
+  height: 50px;
+}
+
+.uheaderitem {
+  display: flex;
+  align-items: center;
+}
+.uheaderitem img {
+  margin-right: 15px;
+}
+
 body {
   font-family: "Montserrat", sans-serif;
   color: #000000;
   font-size: 14px;
   font-weight: 400;
+}
+
+dl, ol, ul {
+  margin-top: revert !important;
+}
+
+.carousel-control-prev, .carousel-control-next {
+  opacity: 0 !important;
 }/*# sourceMappingURL=styles.css.map */
