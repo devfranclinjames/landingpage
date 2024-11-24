@@ -6,6 +6,9 @@ import outerwear from "../images/outerwear.jpg"
 import holidays from "../images/holidays.jpg" 
 import nightout from "../images/nightout.jpg" 
 import boots from "../images/boots.jpg" 
+import woman1 from "../images/woman1.png" 
+import woman2 from "../images/woman2.png" 
+import goldbg from "../images/goldbg.png" 
 import React from 'react'
 
 const HomeContent = () => {
@@ -107,7 +110,29 @@ const HomeContent = () => {
                     </div>
                 </div>
             </div>
+
+            {/* hashtags */}
+            <div className="hashtagslist">
+                <div className="hashtagItem">#Thanksgiving</div>
+                <div className="hashtagItem">#NewYears</div>
+                <div className="hashtagItem">#Knitted</div>
+                <div className="hashtagItem">#Pajamas</div>
+                <div className="hashtagItem">#WFH</div>
+                <div className="hashtagItem">#FallFashion</div>
+            </div>
+
+            {/* New */}
         </section>
+        <div className="newsCard">
+            <img src={woman1} className="cardimagemerge a" alt="" />
+            <img src={woman2} className="cardimagemerge b" alt="" />
+            <img src={goldbg} className="cardimagemerge bg" alt="" />
+            <div className="newsContent">
+                <h1>NEW ARRIVALS</h1>
+                <span>Get ready for the holidays with us!</span>
+                <button>SHOP NOW</button>
+            </div>
+        </div>
     </>
   )
 }
