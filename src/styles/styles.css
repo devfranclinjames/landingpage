@@ -1,5 +1,4 @@
 header {
-  max-width: 1440px;
   height: 70px;
   background: white;
   width: 100%;
@@ -158,7 +157,7 @@ header .currency .usLogoCurrency {
   overflow: hidden;
 }
 .newsCard .cardimagemerge {
-  position: absolute;
+  width: 100%;
 }
 .newsCard .a, .newsCard .b, .newsCard .newsContent {
   left: 50%;

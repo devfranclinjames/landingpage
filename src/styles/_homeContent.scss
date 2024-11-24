@@ -113,7 +113,7 @@
     height: 400px;
     overflow: hidden;
     .cardimagemerge{
-        position: absolute;
+        width: 100%;
     }
     .a, .b, .newsContent{
         @include absoluteMid();
