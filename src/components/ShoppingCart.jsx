@@ -1,7 +1,7 @@
 import React, { createContext, useContext, useState, useEffect } from "react";
 import Cookies from "js-cookie";
 
-// Create a context for the shopping cart
+// context for the shopping cart
 const CartContext = createContext();
 
 export const useCart = () => useContext(CartContext);
@@ -16,9 +16,9 @@ const ShoppingCart = ({ children }) => {
       try {
         const parsedCart = JSON.parse(savedCart).map((item) => ({
           ...item,
-          price: parseFloat(item.price), // Ensure price is a number
-          quantity: parseInt(item.quantity, 10), // Ensure quantity is a number
-          discounted: item.discounted ? parseFloat(item.discounted) : null, // Ensure discounted is a number or null
+          price: parseFloat(item.price), 
+          quantity: parseInt(item.quantity, 10), 
+          discounted: item.discounted ? parseFloat(item.discounted) : null,
         }));
         setCart(parsedCart);
       } catch (error) {
@@ -28,11 +28,13 @@ const ShoppingCart = ({ children }) => {
     }
   }, []);
 
+  
   const updateCartCookie = (updatedCart) => {
     setCart(updatedCart);
     Cookies.set("shoppingCart", JSON.stringify(updatedCart), { expires: 7 });
   };
 
+  // ADD
   const addToCart = (item) => {
     const existingItem = cart.find((cartItem) => cartItem.id === item.id);
     if (existingItem) {
@@ -43,6 +45,7 @@ const ShoppingCart = ({ children }) => {
     }
   };
 
+  // UPDATE
   const editCartItem = (id, newQuantity) => {
     const updatedCart = cart.map((item) =>
       item.id === id ? { ...item, quantity: newQuantity } : item
@@ -50,6 +53,7 @@ const ShoppingCart = ({ children }) => {
     updateCartCookie(updatedCart);
   };
 
+  // DELETE
   const deleteFromCart = (id) => {
     const updatedCart = cart.filter((item) => item.id !== id);
     updateCartCookie(updatedCart);
