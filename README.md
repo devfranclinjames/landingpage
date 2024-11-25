@@ -1,6 +1,7 @@
 This is a mockup of a 24hour code challenge from ehrlich
 
 Website can be accessed here https://devfranclinjames.github.io/landingpage/
+A google Drive zipped file cazn be accessed here: https://drive.google.com/drive/folders/1l2Wvp1zROYYb8nNmvBFpZH6Z8363TRBO?usp=sharing
 
 # React + Vite
 
